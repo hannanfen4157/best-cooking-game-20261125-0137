@@ -1,0 +1,45 @@
+/* The Golden Ladle — page chrome around the canvas. The game itself is drawn on the
+   canvas, so this file only centres it on a warm background and keeps the hint line
+   readable. No web fonts are loaded: the canvas uses system fonts. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #2b1d12;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+.stage {
+  width: min(1280px, 100vw);
+  padding: 12px;
+}
+
+#game {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  background: #f7e8c9;
+}
+
+.hint {
+  margin: 10px 4px 0;
+  color: #e8d3a8;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
